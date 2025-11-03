@@ -64,19 +64,22 @@ h2 {
 }
 
 .mole {
-  /*background:url('./assets/mole.png') bottom center no-repeat;*/
-  background:url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mole.png?raw=true') bottom center no-repeat;
+  background: url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mole.png?raw=true') bottom center no-repeat;
   background-size: 40%;
   position: absolute;
   top: 100%;
   width: 100%;
   height: 100%;
-  /*transition: transform 0.5s;*/
-  transition: all 1s;
-  pointer-events:auto;
+  transition: all 0.1s;
+  pointer-events: auto;
+  cursor: url('../assets/hammer-down.png') 16 16, pointer;  /* Adjusted hotspot to 16x16 for better accuracy */
+}
+
+.mole:active {
+  cursor: url('../assets/hammer-down.png') 16 16, pointer;
+  transform: scale(0.95);
 }
 
 .hole.show .mole {
   top: 0;
-  /*transform: scale(1.1);*/
 }
